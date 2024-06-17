@@ -1,2 +1,2 @@
-# green_endophytes
+# Green endophytes
 ONT sequencing of green endophytes
