@@ -10,4 +10,4 @@ The folder "scripts" contains code for running analyses.
   - 4051 sequences
 - **Marcelino & Verbruggen (2017)**: "Reference datasets of tufA and UPA markers to identify algae in metabarcoding surveys," *Data in Brief*, 11:273-276, DOI: [10.1016/j.dib.2017.02.013](https://doi.org/10.1016/j.dib.2017.02.013).
   - 863 sequences
-- **Phaeoexplorer**: BLAST hits against the Phaeoexplorer database ([Phaeoexplorer]
+- **Phaeoexplorer**: BLAST hits against the Phaeoexplorer database ([Phaeoexplorer](http://phaeoexplorer.sb-roscoff.fr/home/)).
