@@ -17,7 +17,7 @@ This repository contains a curated database of the tufA gene, focusing on entrie
     - **Marcelino & Verbruggen (2017)**: "Reference datasets of tufA and UPA markers to identify algae in metabarcoding surveys," *Data in Brief*, 11:273-276, DOI: [10.1016/j.dib.2017.02.013](https://doi.org/10.1016/j.dib.2017.02.013).
       - Originally 863 sequences
     - **Phaeoexplorer**: BLAST hits against the Phaeoexplorer database ([Phaeoexplorer](http://phaeoexplorer.sb-roscoff.fr/home/)).
-      - 
+      - Additional 51 sequences from Phaeoexplorer (brown algae genomes).
     - **GenBank**: BLASTed operational taxonomic units (OTUs) against GenBank for comprehensive coverage.
       - Additional 26 sequences from GenBank, 
 
