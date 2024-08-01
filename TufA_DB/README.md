@@ -12,8 +12,8 @@ This repository contains a curated database of the tufA gene, focusing on entrie
     - Taxonomy has been updated using the `taxonomizr` package in R.
 
 3. **Sources**
-    - **Sauvage et al. (2016)**: "A metabarcoding framework for facilitated survey of endolithic phototrophs with tufA," *BMC Ecology*, 16:8, DOI: [10.1186/s12898-016-0068-x](https://doi.org/10.1186/s12898-016-0068-x).
-      - Originally 4051 sequences (precleaining)
+    - **Sauvage et al. (2016)**: "A metabarcoding framework for a facilitated survey of endolithic phototrophs with tufA," *BMC Ecology*, 16:8, DOI: [10.1186/s12898-016-0068-x](https://doi.org/10.1186/s12898-016-0068-x).
+      - Originally 4051 sequences (precleaning)
     - **Marcelino & Verbruggen (2017)**: "Reference datasets of tufA and UPA markers to identify algae in metabarcoding surveys," *Data in Brief*, 11:273-276, DOI: [10.1016/j.dib.2017.02.013](https://doi.org/10.1016/j.dib.2017.02.013).
       - Originally 863 sequences
     - **Phaeoexplorer**: BLAST hits against the Phaeoexplorer database ([Phaeoexplorer](http://phaeoexplorer.sb-roscoff.fr/home/)).
