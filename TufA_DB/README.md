@@ -42,5 +42,48 @@ This repository contains a curated database of the tufA gene, focusing on entrie
         - end of alignment in subject
         - e-value
         - bit score
-- **R Scripts**
-    - R scripts for data cleaning and taxonomy updates are available in `clean_db_add_tax.R`.
+### R Scripts
+  - R scripts for data cleaning and taxonomy updates are available in `clean_db_add_tax.R`.
+
+## Species list
+A list of the taxonomy and the number of species for each is added to the repository as `species_list.tsv`.
+
+I searched for some of the groups we talked about in the meeting 6 August 2024: 
+- The genus *Kappaphycus* is only represented by one entry in the database.
+``` 
+MN240358|Eukaryota;Rhodophyta;Florideophyceae;Gigartinales;Solieriaceae;Kappaphycus;Kappaphycus_striatus
+```
+- *Phaeophila* is better represented: 
+```
+KU362151|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362152|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362153|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362154|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362155|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362156|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362157|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362158|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362159|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+KU362160|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophilaceae_X;uncultured_Phaeophilaceae
+AY454414|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+AY454415|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+KU362062|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_sp_TS1583
+KJ411922|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+AY454416|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+AY454413|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+MF574043|Eukaryota;Chlorophyta;Chlorophyceae;Phaeophilales;Phaeophilaceae;Phaeophila;Phaeophila_dendroides
+```
+- The genus *Acrosiphonia*
+```
+HQ610211|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_arcta
+MW921442|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_arcta
+HQ610218|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_coalita
+HQ610224|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sonderi
+HQ610236|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sp_1GWS
+JX572166|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sp_6GWS
+HQ610221|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sonderi
+HQ610232|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sp_1GWS
+JX572165|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sp_3GWS
+KM255012|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_cf_coalita_GWS2014
+```
+

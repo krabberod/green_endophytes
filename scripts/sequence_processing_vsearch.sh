@@ -12,11 +12,22 @@ ml VSEARCH/2.25.0-GCC-12.3.0
 # adds the sample name to the start of each sequence identifier, and saves the modified sequences
 # in a new file with a '.labeled.fasta' extension.
 echo "Step 2: Adding sample name to keep track of sequences..."
-for file in S*.gz;
+#for file in S*.gz;
+#do
+#    sample=$(basename $file .fasta.gz)
+#    echo "Processing file: $file"
+#    zcat $file | sed "s/^>/>$sample|/" > ${sample}.labeled.fasta
+# done
+
+
+
+# Alternative step 2: Add sample name to each sequence (if files are not compressed)
+# For each FASTA file starting with 'S', this step adds the sample name to the start of each sequence identifier,
+# for file in S*.fasta; 
 do
-    sample=$(basename $file .fasta.gz)
+    sample=$(basename $file .fasta)
     echo "Processing file: $file"
-    zcat $file | sed "s/^>/>$sample|/" > ${sample}.labeled.fasta
+    sed "s/^>/>$sample|/" $file > ${sample}.labeled.fasta
 done
 
 # Step 3: Concatenate all sequences
