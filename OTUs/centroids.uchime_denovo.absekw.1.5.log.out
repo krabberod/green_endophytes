@@ -1,0 +1,18 @@
+vsearch v2.22.1_linux_x86_64, 188.0GB RAM, 80 cores
+/cluster/projects/nn9338k/embla/shared/vsearch-2.22.1.chimera-linux-x86_64 --uchime3_denovo centroids.fasta --chimeras centroids.uchime3_denovo.absekw.1.5.chim.out --nonchimeras centroids.uchime3_denovo.absekw.1.5.non-chim.out --sizein --log centroids.uchime_denovo.absekw.1.5.log.out --abskew 1.5
+Started  Sat Aug 10 00:56:09 2024
+29942640 nt in 36815 seqs, min 300, max 895, avg 813
+
+    0.28  minh
+    8.00  xn
+    1.40  dn
+    1.00  xa
+    0.80  mindiv
+    0.55  id
+       2  maxp
+
+centroids.fasta: 66/36815 chimeras (0.2%)
+
+Finished Sat Aug 10 01:02:46 2024
+Elapsed time 06:37
+Max memory 119.6MB
