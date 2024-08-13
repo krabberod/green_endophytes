@@ -86,4 +86,7 @@ HQ610232|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphon
 JX572165|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_sp_3GWS
 KM255012|Eukaryota;Chlorophyta;Ulvophyceae;Ulotrichales;Ulotrichaceae;Acrosiphonia;Acrosiphonia_cf_coalita_GWS2014
 ```
-
+# UPDATED 13 August 2024
+Downloaded all sequences from NCBI matching these criteria (txid131221 is Streptophytina, i.e. land plants):
+- Chloroplasts: chloroplast[title] AND 400[SLEN]:999999999[SLEN] NOT txid131221[Organism:exp]  
+- TufA: tufA[title] AND 400[SLEN]:999999999[SLEN] NOT txid131221[Organism:exp]
