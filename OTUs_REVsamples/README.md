@@ -103,7 +103,7 @@ vsearch --sortbysize all_samples_derep.fasta --output all_samples_sorted.fasta
 ``` 
 
 ### Clustering the reads
-See the script called [vsearch_cluster.sh](scripts/vsearch_cluster.sh) for the commands used to cluster the reads. The script is run as follows:
+See the script called [vsearch_cluster.sh](../scripts/vsearch_cluster.sh) for the commands used to cluster the reads. The script is run as follows:
 ```bash
 for i in 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91;
 ./vsearch_cluster.sh all_samples_sorted.fasta $i
@@ -111,7 +111,7 @@ done
 ```
 
 ### Chimera detection,and making the OTU table
-See the script called [vsearch_uchime_and_map.sh](scripts/vsearch_uchime_and_map.sh) for the commands used to detect chimeras and make the OTU table. The script can be run as follows:
+See the script called [vsearch_uchime_and_map.sh](../scripts/vsearch_uchime_and_map.sh) for the commands used to detect chimeras and make the OTU table. The script can be run as follows:
 ```bash
 for i in 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91; do
 sbatch vsearch_uchime_and_map.slurm $i;
