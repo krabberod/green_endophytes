@@ -1,9 +1,40 @@
 # Demlutiplexing using only the REV primers+barcodes
 
-This pipeline follows the same steps as the original pipeline (see [here](scripts/README.md)), but it uses only the REV primers and barcodes to demultiplex the samples, since the combined demultiplexing did not work as expected. The new pipeline is as follows:
+This pipeline follows the same steps as the original pipeline (see [here](scripts/README.md)), but it uses only the REV primers and barcodes to demultiplex the samples since the combined demultiplexing did not work as expected. The new pipeline is as follows:
+
+### Methods Summary
+
+This pipeline demultiplexes samples using only the REV primers and barcodes, diverging slightly from the original pipeline due to issues with combined demultiplexing.
+
+1. **Quality Trimming**  
+   Performed with `cutadapt`, trimming the ends of reads below a quality score of 20.
+2. **Demultiplexing**  
+   Conducted with `cutadapt`, using REV primers and barcodes.
+3. **Gene Prediction**  
+   Utilized HMMER with the `tufA_DB_alignment.hmm` model to predict the tufA gene, filtering sequences to a minimum length of 600 bp.
+4. **Relabeling and Merging**  
+   Relabeled samples using `sed` and merged them into a single FASTA file.
+5. **Dereplication**  
+   Executed with `vsearch` to remove duplicate reads.
+6. **Sorting**  
+   Sorted reads by size using `vsearch`.
+7. **Clustering**  
+   Conducted clustering with `vsearch` at varying identity thresholds (0.99 to 0.91).
+8. **Chimera Detection & OTU Table Construction**  
+   Identified chimeras and generated the OTU table using a custom script (`vsearch_uchime_and_map.sh`).
+9. **Reference Matching**  
+   Performed with `vsearch` using the tufA_DB_v2.fasta database to find best matches at 80% identity.
+
+
+References:
+- [cutadapt](https://cutadapt.readthedocs.io/en/stable/), Martin M. Cutadapt removes adapter sequences from high-throughput sequencing reads. EMBnet.journal 17:10-12 (2011)
+- [HMMER](http://hmmer.org/), Eddy SR. Accelerated profile HMM searches. PLoS Comput Biol. 7:e1002195 (2011)
+- [SeqKit](https://bioinf.shenwei.me/seqkit/), Shen W, et al. SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q File Manipulation. PLoS ONE 11:e0163962 (2016)
+- [vsearch](https://github.com/torognes/vsearch), Rognes T, et al. VSEARCH: a versatile open source tool for metagenomics. PeerJ 4:e2584 (2016)
+
 
 ### Quality trimming of the raw reads
-To remove low-quality reads, we use the `cutadapt` tool. The following command removes reads with a quality score lower than 20 in both ends of the reads:
+To remove low-quality reads, we use the `cutadapt` tool. The following command removes reads with a quality score lower than 20 on both ends of the reads:
 ```bash
 cutadapt -q 20,20 -o output.fastq input.fastq
 ```
@@ -18,7 +49,7 @@ cutadapt -g file:REV.barcodes.fasta -o output.fasta <trimmed.reads.input>
 
 ### Gene prediction
 Use hmm to find the tufA gene, and set the minimum length to 600bp.  
-HMMER, Easel library, and SeqKit are needed to run this script.
+HMMER, and SeqKit are needed to run this script.
 And you need the tufA_DB_alignment.hmm model based on the tufA gene (in the script folder).
 ```bash
 HMM=tufA_DB_alignment.hmm
@@ -94,7 +125,9 @@ vsearch --usearch_global $REF --db $DB --blast6out $REF.tufDB_v2.0.80.tab --thre
 ```
 
 
+### Clustering and chimera detection reports
 
+The clustering resulted in 30122 clusters with an average size of 23.6 reads per cluster. The clustering also identified 15742 chimeric OTUS (52.3%) and 13823 non-chimeric OTUS (45.9%). These OTUs represent 2.9% and 97.0% of the total reads, respectively. 
 
 ```bash
 ######################
