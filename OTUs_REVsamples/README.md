@@ -1,6 +1,6 @@
 # Demlutiplexing using only the REV primers+barcodes
 
-This pipeline follows the same steps as the original pipeline (see [here](scripts/README.md)), but it uses only the REV primers and barcodes to demultiplex the samples since the combined demultiplexing did not work as expected. The new pipeline is as follows:
+This pipeline follows the same steps as the original pipeline (see [here](../scripts/README.md), but it uses only the REV primers and barcodes to demultiplex the samples since the combined demultiplexing did not work as expected. The new pipeline is as follows:
 
 ### Methods Summary
 
